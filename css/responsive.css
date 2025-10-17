@@ -1,0 +1,134 @@
+/* ==============================
+    MOBILE & TABLET
+   ============================== */
+@media (max-width: 768px) {
+  /* Header tổng thể */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  /* Logo */
+  .header__logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  /* Ẩn menu ngang mặc định */
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Khi mở menu */
+  .header__menu.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Các mục menu */
+  .header__item {
+    margin: 10px 0;
+  }
+
+  .header__item a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  /* Nút toggle  */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Action buttons (AM + Đặt ngay) */
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Footer giữ nguyên hiển thị */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+    background: #f8f8f8;
+  }
+
+  .footer__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+
+/* ==============================
+    LAPTOP & DESKTOP
+   ============================== */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Ẩn nút  ở màn lớn */
+  }
+
+  .header__menu {
+    display: flex;
+    gap: 1.5rem;
+    position: static;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .header__item a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+  }
+
+  .footer__socials {
+    display: flex;
+    gap: 15px;
+  }
+}
